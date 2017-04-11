@@ -6,12 +6,12 @@ RUN apt-get update -qy && apt-get -qy install \
 WORKDIR /root/
 
 COPY README.md  .
-COPY build   .
-COPY busybox-klibc .
-COPY deploy .
-COPY firmware .
-COPY kernel     .
-COPY raspbian .
+COPY build   build
+COPY busybox-klibc busybox-klibc
+COPY deploy deploy
+COPY firmware firmware
+COPY kernel     kernel
+COPY raspbian raspbian
 
 RUN ln -s ./rpi-ramdisk/raspbian/lib/ld-linux-armhf.so.3 /lib
 
